@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InputValidation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2E-he-GBd">
+                                <rect key="frame" x="20" y="110" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-bQ-tcu">
+                                <rect key="frame" x="20" y="160" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-aQ-g2F">
+                                <rect key="frame" x="20" y="210" width="374" height="29"/>
+                                <segments>
+                                    <segment title="Incorrect"/>
+                                    <segment title="Correct"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGP-xg-3Ih">
+                                <rect key="frame" x="20" y="258" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ztn-aQ-g2F" firstAttribute="top" secondItem="u8W-bQ-tcu" secondAttribute="bottom" constant="20" id="0xf-Zd-Lnd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ztn-aQ-g2F" secondAttribute="trailing" constant="20" id="3Tm-Dq-eE6"/>
+                            <constraint firstItem="u8W-bQ-tcu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AsX-oP-Kh9"/>
+                            <constraint firstItem="u8W-bQ-tcu" firstAttribute="top" secondItem="E2E-he-GBd" secondAttribute="bottom" constant="20" id="Dkm-tU-ULE"/>
+                            <constraint firstItem="E2E-he-GBd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="e9K-pw-WVZ"/>
+                            <constraint firstItem="Ztn-aQ-g2F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eDU-tQ-IGc"/>
+                            <constraint firstItem="E2E-he-GBd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="eV8-Mk-9qy"/>
+                            <constraint firstItem="AGP-xg-3Ih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jRF-g5-fQ2"/>
+                            <constraint firstItem="AGP-xg-3Ih" firstAttribute="top" secondItem="Ztn-aQ-g2F" secondAttribute="bottom" constant="20" id="o71-uE-zIJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AGP-xg-3Ih" secondAttribute="trailing" constant="20" id="w8c-88-FTy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u8W-bQ-tcu" secondAttribute="trailing" constant="20" id="yuC-9q-FpM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E2E-he-GBd" secondAttribute="trailing" constant="20" id="z1l-63-ZLN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="u8W-bQ-tcu" id="sit-RI-gpg"/>
+                        <outlet property="errorLabel" destination="AGP-xg-3Ih" id="aKb-uk-bYF"/>
+                        <outlet property="passwordTextField" destination="E2E-he-GBd" id="1oc-kE-qqf"/>
+                        <outlet property="segmentedControl" destination="Ztn-aQ-g2F" id="Zii-MZ-Bbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
